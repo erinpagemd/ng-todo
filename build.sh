@@ -3,8 +3,8 @@
 # Clean and create empty public directories
 rm -rf public
 mkdir public
+mkdir public/scripts
 mkdir public/css
-mkdir public/js
 
 # Copy html and css files in the app folder into the public directory and preserve directories
 # Add additional file extensions if needed i.e. images, fonts, etc..
@@ -17,6 +17,7 @@ mkdir public/vendor
 cp bower_components/jquery/dist/jquery.js public/vendor
 cp bower_components/lodash/lodash.min.js public/vendor
 cp bower_components/firebase/firebase.js public/vendor
+cp bower_components/angular/angular.min.js public/vendor
 cp bower_components/bootstrap/dist/css/bootstrap.min.css public/css
 
 ###############################
@@ -38,7 +39,7 @@ rm -rf public/_*.html
   --include-path styles \
   --include-path bower_components \
   --source-map-embed \
-  app/styles/main.scss public/css/main.css
+  app/styles/style.scss public/css/style.css
 
 #####################################
 # Browserify (npm intalled locally) #

@@ -1,5 +1,5 @@
 {
-  "name": "nerd-tree",
+  "name": "ng-ToDo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/erinpagemd/nerd-tree.git"
+    "url": "https://github.com/erinpagemd/ng-todo.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/erinpagemd/nerd-tree/issues"
+    "url": "https://github.com/erinpagemd/ng-todo/issues"
   },
-  "homepage": "https://github.com/erinpagemd/nerd-tree",
+  "homepage": "https://github.com/erinpagemd/ng-todo",
   "devDependencies": {
     "chai": "^2.0.0",
     "codeclimate-test-reporter": "0.0.4",
