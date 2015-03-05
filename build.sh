@@ -16,8 +16,11 @@ cd ..
 mkdir public/vendor
 cp bower_components/jquery/dist/jquery.js public/vendor
 cp bower_components/lodash/lodash.min.js public/vendor
+cp bower_components/jquery/dist/jquery.min.map public/vendor
 cp bower_components/firebase/firebase.js public/vendor
 cp bower_components/angular/angular.min.js public/vendor
+cp bower_components/angular/angular.min.js.map public/vendor
+
 cp bower_components/bootstrap/dist/css/bootstrap.min.css public/css
 
 ###############################

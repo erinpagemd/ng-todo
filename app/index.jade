@@ -2,14 +2,31 @@ doctype html
 html 
   head
     meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
     link(rel='stylesheet' href='css/bootstrap.min.css' type='text/css')
     link(rel='stylesheet' href='css/style.css' type='text/css')
-    title Ng ToDo
-  body
-    h1 All the Things
+    title Ng Todos
+  
+  body(ng-app='tasks')
+    .container(ng-controller='TasksController as tasks')
+      .row
+        .col-md-12
+          h1 All the Things
+          form.form-inline(ng-submit='tasks.addTask()')
+            input.form-control(type='text' ng-model='task' placeholder='some awesome task')
+            input.btn.btn-primary(type='submit' value='save')   
+          table.table
+            tbody
+              tr(ng-repeat='task in tasks.data')
+                td {{task.todo}}
+                td
+                  input(type='checkbox' ng-checked='{{task.complete}}')
+                td
+                  button.btn.btn-danger(ng-click='tasks.removeTask(task)') X
+      
     
-    
-    script(type='text/javascript' src='vendor/jquery.js')
+    script(type='text/javascript' src='vendor/jquery.min.js')
     script(type='text/javascript' src='vendor/lodash.min.js')
     script(type='text/javascript' src='vendor/firebase.js')
     script(type='text/javascript' src='vendor/angular.min.js')
